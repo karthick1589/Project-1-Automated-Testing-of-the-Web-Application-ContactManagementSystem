@@ -1,0 +1,360 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">CrossBrowserSuite</th></tr>
+<tr><td><a href="#t0">Chrome Test</a></td><td class="num">27</td><td class="num">0</td><td class="num">0</td><td class="num attn">5</td><td class="num">457,375</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Firefox Test</a></td><td class="num">23</td><td class="num">0</td><td class="num">0</td><td class="num attn">9</td><td class="num">623,627</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">50</th><th class="num">0</th><th class="num">0</th><th class="num attn">14</th><th class="num">1,081,002</th><th colspan="2"></th></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">CrossBrowserSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Chrome Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testcases.DeleteContactTest</td><td><a href="#m0">testDeleteContactPermanently</a></td><td rowspan="1">1766750688002</td><td rowspan="1">5311</td></tr><tr class="failedodd"><td rowspan="2">testcases.EditContactTest</td><td><a href="#m1">testEditContactSuccessfully</a></td><td rowspan="1">1766750496477</td><td rowspan="1">19165</td></tr><tr class="failedodd"><td><a href="#m2">testEditValidationMissingField</a></td><td rowspan="1">1766750605633</td><td rowspan="1">47305</td></tr><tr class="failedeven"><td rowspan="1">testcases.SessionNavigationTest</td><td><a href="#m3">verifyLoginRequiredForContactList</a></td><td rowspan="1">1766750459594</td><td rowspan="1">11290</td></tr><tr class="failedodd"><td rowspan="1">testcases.UITest</td><td><a href="#m4">testContactFormAlignment</a></td><td rowspan="1">1766750489007</td><td rowspan="1">1501</td></tr><tr><th colspan="4">Chrome Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">testcases.AddContactTest</td><td><a href="#m5">testAddContactMissingRequiredFields</a></td><td rowspan="1">1766750556898</td><td rowspan="1">3740</td></tr><tr class="passedeven"><td><a href="#m6">testAddValidContact</a></td><td rowspan="1">1766750476558</td><td rowspan="1">6283</td></tr><tr class="passedeven"><td><a href="#m7">testDuplicateContactBehavior</a></td><td rowspan="1">1766750670927</td><td rowspan="1">7938</td></tr><tr class="passedeven"><td><a href="#m8">testFormResetAfterAddition</a></td><td rowspan="1">1766750700820</td><td rowspan="1">7269</td></tr><tr class="passedeven"><td><a href="#m9">testInvalidPhoneInput</a></td><td rowspan="1">1766750658798</td><td rowspan="1">6120</td></tr><tr class="passedodd"><td rowspan="2">testcases.DeleteContactTest</td><td><a href="#m10">testDeleteContactAlert</a></td><td rowspan="1">1766750583031</td><td rowspan="1">1289</td></tr><tr class="passedodd"><td><a href="#m11">testSelectSpecificContact</a></td><td rowspan="1">1766750534933</td><td rowspan="1">3075</td></tr><tr class="passedeven"><td rowspan="1">testcases.EditContactTest</td><td><a href="#m12">testCancelEdit</a></td><td rowspan="1">1766750566210</td><td rowspan="1">7145</td></tr><tr class="passedodd"><td rowspan="2">testcases.InputValidationTest</td><td><a href="#m13">testMaxCharacterLimit</a></td><td rowspan="1">1766750522713</td><td rowspan="1">4364</td></tr><tr class="passedodd"><td><a href="#m14">testUnicodeAndEmojis</a></td><td rowspan="1">1766750591951</td><td rowspan="1">7902</td></tr><tr class="passedeven"><td rowspan="5">testcases.LoginTest</td><td><a href="#m15">testInvalidEmailFormat</a></td><td rowspan="1">1766750267875</td><td rowspan="1">1301</td></tr><tr class="passedeven"><td><a href="#m16">testLoginWithEmptyFields</a></td><td rowspan="1">1766750329506</td><td rowspan="1">1639</td></tr><tr class="passedeven"><td><a href="#m17">testLoginWithIncorrectPassword</a></td><td rowspan="1">1766750340030</td><td rowspan="1">3824</td></tr><tr class="passedeven"><td><a href="#m18">testPasswordMasking</a></td><td rowspan="1">1766750364394</td><td rowspan="1">76</td></tr><tr class="passedeven"><td><a href="#m19">testValidLogin</a></td><td rowspan="1">1766750392810</td><td rowspan="1">2690</td></tr><tr class="passedodd"><td rowspan="8">testcases.RegistrationTest</td><td><a href="#m20">testInvalidRegistrationScenarios</a></td><td rowspan="6">1766750273196</td><td rowspan="6">3589</td></tr><tr class="passedodd"><td><a href="#m21">testInvalidRegistrationScenarios</a></td></tr><tr class="passedodd"><td><a href="#m22">testInvalidRegistrationScenarios</a></td></tr><tr class="passedodd"><td><a href="#m23">testInvalidRegistrationScenarios</a></td></tr><tr class="passedodd"><td><a href="#m24">testInvalidRegistrationScenarios</a></td></tr><tr class="passedodd"><td><a href="#m25">testInvalidRegistrationScenarios</a></td></tr><tr class="passedodd"><td><a href="#m26">testRegistrationWithExistingEmail</a></td><td rowspan="1">1766750372764</td><td rowspan="1">13394</td></tr><tr class="passedodd"><td><a href="#m27">testValidSignup</a></td><td rowspan="1">1766750403677</td><td rowspan="1">4143</td></tr><tr class="passedeven"><td rowspan="3">testcases.SessionNavigationTest</td><td><a href="#m28">logout</a></td><td rowspan="1">1766750258841</td><td rowspan="1">2454</td></tr><tr class="passedeven"><td><a href="#m29">verifyBackAfterLogout</a></td><td rowspan="1">1766750416334</td><td rowspan="1">22986</td></tr><tr class="passedeven"><td><a href="#m30">verifyLoginPersistsOnRefresh</a></td><td rowspan="1">1766750448759</td><td rowspan="1">2179</td></tr><tr class="passedodd"><td rowspan="1">testcases.UITest</td><td><a href="#m31">testActionSuccessIndicator</a></td><td rowspan="1">1766750546314</td><td rowspan="1">5073</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Firefox Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">testcases.DeleteContactTest</td><td><a href="#m32">testDeleteContactAlert</a></td><td rowspan="1">1766750759287</td><td rowspan="1">86</td></tr><tr class="failedeven"><td><a href="#m33">testDeleteContactPermanently</a></td><td rowspan="1">1766750853949</td><td rowspan="1">94</td></tr><tr class="failedeven"><td><a href="#m34">testSelectSpecificContact</a></td><td rowspan="1">1766750687458</td><td rowspan="1">65</td></tr><tr class="failedodd"><td rowspan="3">testcases.EditContactTest</td><td><a href="#m35">testCancelEdit</a></td><td rowspan="1">1766750741362</td><td rowspan="1">1806</td></tr><tr class="failedodd"><td><a href="#m36">testEditContactSuccessfully</a></td><td rowspan="1">1766750649963</td><td rowspan="1">1701</td></tr><tr class="failedodd"><td><a href="#m37">testEditValidationMissingField</a></td><td rowspan="1">1766750796184</td><td rowspan="1">2348</td></tr><tr class="failedeven"><td rowspan="1">testcases.RegistrationTest</td><td><a href="#m38">testRegistrationWithExistingEmail</a></td><td rowspan="1">1766750465321</td><td rowspan="1">26344</td></tr><tr class="failedodd"><td rowspan="1">testcases.SessionNavigationTest</td><td><a href="#m39">verifyLoginRequiredForContactList</a></td><td rowspan="1">1766750590693</td><td rowspan="1">12343</td></tr><tr class="failedeven"><td rowspan="1">testcases.UITest</td><td><a href="#m40">testContactFormAlignment</a></td><td rowspan="1">1766750637954</td><td rowspan="1">1822</td></tr><tr><th colspan="4">Firefox Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">testcases.AddContactTest</td><td><a href="#m41">testAddContactMissingRequiredFields</a></td><td rowspan="1">1766750724934</td><td rowspan="1">3171</td></tr><tr class="passedeven"><td><a href="#m42">testAddValidContact</a></td><td rowspan="1">1766750618146</td><td rowspan="1">6625</td></tr><tr class="passedeven"><td><a href="#m43">testDuplicateContactBehavior</a></td><td rowspan="1">1766750828303</td><td rowspan="1">9715</td></tr><tr class="passedeven"><td><a href="#m44">testFormResetAfterAddition</a></td><td rowspan="1">1766750867778</td><td rowspan="1">4712</td></tr><tr class="passedeven"><td><a href="#m45">testInvalidPhoneInput</a></td><td rowspan="1">1766750811978</td><td rowspan="1">3456</td></tr><tr class="passedodd"><td rowspan="2">testcases.InputValidationTest</td><td><a href="#m46">testMaxCharacterLimit</a></td><td rowspan="1">1766750667570</td><td rowspan="1">2811</td></tr><tr class="passedodd"><td><a href="#m47">testUnicodeAndEmojis</a></td><td rowspan="1">1766750776345</td><td rowspan="1">6391</td></tr><tr class="passedeven"><td rowspan="5">testcases.LoginTest</td><td><a href="#m48">testInvalidEmailFormat</a></td><td rowspan="1">1766750280431</td><td rowspan="1">1252</td></tr><tr class="passedeven"><td><a href="#m49">testLoginWithEmptyFields</a></td><td rowspan="1">1766750417936</td><td rowspan="1">811</td></tr><tr class="passedeven"><td><a href="#m50">testLoginWithIncorrectPassword</a></td><td rowspan="1">1766750432904</td><td rowspan="1">896</td></tr><tr class="passedeven"><td><a href="#m51">testPasswordMasking</a></td><td rowspan="1">1766750448940</td><td rowspan="1">91</td></tr><tr class="passedeven"><td><a href="#m52">testValidLogin</a></td><td rowspan="1">1766750504519</td><td rowspan="1">1345</td></tr><tr class="passedodd"><td rowspan="7">testcases.RegistrationTest</td><td><a href="#m53">testInvalidRegistrationScenarios</a></td><td rowspan="6">1766750378552</td><td rowspan="6">2505</td></tr><tr class="passedodd"><td><a href="#m54">testInvalidRegistrationScenarios</a></td></tr><tr class="passedodd"><td><a href="#m55">testInvalidRegistrationScenarios</a></td></tr><tr class="passedodd"><td><a href="#m56">testInvalidRegistrationScenarios</a></td></tr><tr class="passedodd"><td><a href="#m57">testInvalidRegistrationScenarios</a></td></tr><tr class="passedodd"><td><a href="#m58">testInvalidRegistrationScenarios</a></td></tr><tr class="passedodd"><td><a href="#m59">testValidSignup</a></td><td rowspan="1">1766750517782</td><td rowspan="1">3922</td></tr><tr class="passedeven"><td rowspan="3">testcases.SessionNavigationTest</td><td><a href="#m60">logout</a></td><td rowspan="1">1766750265121</td><td rowspan="1">2413</td></tr><tr class="passedeven"><td><a href="#m61">verifyBackAfterLogout</a></td><td rowspan="1">1766750537936</td><td rowspan="1">23495</td></tr><tr class="passedeven"><td><a href="#m62">verifyLoginPersistsOnRefresh</a></td><td rowspan="1">1766750573937</td><td rowspan="1">2413</td></tr><tr class="passedodd"><td rowspan="1">testcases.UITest</td><td><a href="#m63">testActionSuccessIndicator</a></td><td rowspan="1">1766750706246</td><td rowspan="1">4281</td></tr></tbody>
+</table>
+<h2>Chrome Test</h2><h3 id="m0">testcases.DeleteContactTest#testDeleteContactPermanently</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Contact was not deleted successfully.
+	at testcases.DeleteContactTest.testDeleteContactPermanently(DeleteContactTest.java:143)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testcases.EditContactTest#testEditContactSuccessfully</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for text (&apos;update1766750501050@test.com&apos;) to be present in element [[ChromeDriver: chrome on windows (e856d5ef94adedf7d3530c4ec3f6d4aa)] -&gt; id: email] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\KARTHI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56178}, goog:processID: 12712, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56178/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e856d5ef94adedf7d3530c4ec3f6d4aa
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pageclass.ContactDetailsPage.waitForUpdatedEmail(ContactDetailsPage.java:45)
+	at testcases.EditContactTest.testEditContactSuccessfully(EditContactTest.java:58)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testcases.EditContactTest#testEditValidationMissingField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.id: error&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pageclass.AddContactPage.getErrorMessage(AddContactPage.java:60)
+	at testcases.EditContactTest.testEditValidationMissingField(EditContactTest.java:121)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#error&quot;}
+  (Session info: chrome=143.0.7499.170)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [769e160f876004a474e8ca65fbffe50c, findElement {value=error, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\KARTHI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52992}, goog:processID: 5892, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52992/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 769e160f876004a474e8ca65fbffe50c
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:308)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:294)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:291)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 22 more
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">testcases.SessionNavigationTest#verifyLoginRequiredForContactList</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to be &quot;https://thinking-tester-contact-list.herokuapp.com/&quot;. Current url: &quot;https://thinking-tester-contact-list.herokuapp.com/contactList&quot; (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\KARTHI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56040}, goog:processID: 3456, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56040/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0bc40a980168c3453f8cfa79908f0163
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at testcases.SessionNavigationTest.verifyLoginRequiredForContactList(SessionNavigationTest.java:103)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">testcases.UITest#testContactFormAlignment</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Right Column Alignment Failed (Phone vs LastName) expected [451] but found [361]
+	at testcases.UITest.testContactFormAlignment(UITest.java:78)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 21 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">testcases.AddContactTest#testAddContactMissingRequiredFields</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">testcases.AddContactTest#testAddValidContact</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">testcases.AddContactTest#testDuplicateContactBehavior</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">testcases.AddContactTest#testFormResetAfterAddition</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">testcases.AddContactTest#testInvalidPhoneInput</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">testcases.DeleteContactTest#testDeleteContactAlert</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">testcases.DeleteContactTest#testSelectSpecificContact</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">testcases.EditContactTest#testCancelEdit</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">testcases.InputValidationTest#testMaxCharacterLimit</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">testcases.InputValidationTest#testUnicodeAndEmojis</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">testcases.LoginTest#testInvalidEmailFormat</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">testcases.LoginTest#testLoginWithEmptyFields</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m17">testcases.LoginTest#testLoginWithIncorrectPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m18">testcases.LoginTest#testPasswordMasking</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m19">testcases.LoginTest#testValidLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m20">testcases.RegistrationTest#testInvalidRegistrationScenarios</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td></td><td>vel</td><td>valid1766750269813@test.com</td><td>Password123!</td><td>firstName` is required</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m21">testcases.RegistrationTest#testInvalidRegistrationScenarios</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>Kadamba</td><td>vel</td><td></td><td>Password123!</td><td>Email is invalid</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m22">testcases.RegistrationTest#testInvalidRegistrationScenarios</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>Kadamba</td><td>vel</td><td>valid1766750269813@test.com</td><td>123</td><td>is shorter than the minimum allowed length (7)</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m23">testcases.RegistrationTest#testInvalidRegistrationScenarios</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>Kadamba</td><td>vel</td><td>valid1766750269813@valid</td><td>Password123$</td><td>Email is invalid</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m24">testcases.RegistrationTest#testInvalidRegistrationScenarios</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>Kadamba</td><td></td><td>valid1766750269813@test.com</td><td>Password123!</td><td>lastName` is required</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m25">testcases.RegistrationTest#testInvalidRegistrationScenarios</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>Kadamba</td><td>vel</td><td>valid1766750269813@test.com</td><td></td><td>password` is required</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m26">testcases.RegistrationTest#testRegistrationWithExistingEmail</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m27">testcases.RegistrationTest#testValidSignup</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m28">testcases.SessionNavigationTest#logout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m29">testcases.SessionNavigationTest#verifyBackAfterLogout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m30">testcases.SessionNavigationTest#verifyLoginPersistsOnRefresh</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m31">testcases.UITest#testActionSuccessIndicator</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Firefox Test</h2><h3 id="m32">testcases.DeleteContactTest#testDeleteContactAlert</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: Element &lt;tr class=&quot;contactTableBodyRow&quot;&gt; could not be scrolled into view
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [9254177d-290e-4111-aabc-e209e6229632, clickElement {id=e0b5f8b3-03cd-4c28-b96a-10dff270d909}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 18652, moz:profile: C:\Users\KARTHI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (9254177d-290e-4111-aabc-e209e6229632)] -&gt; xpath: //tr[@class=&apos;contactTableBodyRow&apos;][1]]
+Session ID: 9254177d-290e-4111-aabc-e209e6229632
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pageclass.ContactListPage.clickFirstContact(ContactListPage.java:42)
+	at testcases.DeleteContactTest.testDeleteContactAlert(DeleteContactTest.java:81)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m33">testcases.DeleteContactTest#testDeleteContactPermanently</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: Element &lt;tr class=&quot;contactTableBodyRow&quot;&gt; could not be scrolled into view
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [3cdb12c2-6851-412a-94d0-66fc6f931d14, clickElement {id=7aea0832-3a2c-491a-8c72-588790a5e2c9}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 18896, moz:profile: C:\Users\KARTHI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (3cdb12c2-6851-412a-94d0-66fc6f931d14)] -&gt; xpath: //tr[@class=&apos;contactTableBodyRow&apos;][1]]
+Session ID: 3cdb12c2-6851-412a-94d0-66fc6f931d14
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pageclass.ContactListPage.clickFirstContact(ContactListPage.java:42)
+	at testcases.DeleteContactTest.testDeleteContactPermanently(DeleteContactTest.java:120)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m34">testcases.DeleteContactTest#testSelectSpecificContact</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: Element &lt;tr class=&quot;contactTableBodyRow&quot;&gt; could not be scrolled into view
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [dfdaf53b-0806-4bde-b7e9-b8ff29c316a2, clickElement {id=e2efbe62-cc4f-4c90-be84-22e7ab546522}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 4500, moz:profile: C:\Users\KARTHI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (dfdaf53b-0806-4bde-b7e9-b8ff29c316a2)] -&gt; class name: contactTableBodyRow]
+Session ID: dfdaf53b-0806-4bde-b7e9-b8ff29c316a2
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pageclass.ContactListPage.clickContactByIndex(ContactListPage.java:58)
+	at testcases.DeleteContactTest.testSelectSpecificContact(DeleteContactTest.java:53)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m35">testcases.EditContactTest#testCancelEdit</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: Element &lt;tr class=&quot;contactTableBodyRow&quot;&gt; could not be scrolled into view
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [06dd889b-c5a6-42c4-8eb1-1643d376b0d3, clickElement {id=c748cdb1-7502-43ae-becf-d5f7bda17b02}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11316, moz:profile: C:\Users\KARTHI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (06dd889b-c5a6-42c4-8eb1-1643d376b0d3)] -&gt; xpath: //tr[@class=&apos;contactTableBodyRow&apos;][1]]
+Session ID: 06dd889b-c5a6-42c4-8eb1-1643d376b0d3
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pageclass.ContactListPage.clickFirstContact(ContactListPage.java:42)
+	at testcases.EditContactTest.testCancelEdit(EditContactTest.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m36">testcases.EditContactTest#testEditContactSuccessfully</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: Element &lt;tr class=&quot;contactTableBodyRow&quot;&gt; could not be scrolled into view
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [54d5c4c2-8360-4044-a3ad-93a458b0ed82, clickElement {id=a3be01d8-d95f-4a85-83ba-695898d97117}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 10432, moz:profile: C:\Users\KARTHI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (54d5c4c2-8360-4044-a3ad-93a458b0ed82)] -&gt; xpath: //tr[@class=&apos;contactTableBodyRow&apos;][1]]
+Session ID: 54d5c4c2-8360-4044-a3ad-93a458b0ed82
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pageclass.ContactListPage.clickFirstContact(ContactListPage.java:42)
+	at testcases.EditContactTest.testEditContactSuccessfully(EditContactTest.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m37">testcases.EditContactTest#testEditValidationMissingField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: Element &lt;tr class=&quot;contactTableBodyRow&quot;&gt; could not be scrolled into view
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [ef3de1d6-e262-44bb-afbc-4e7c457b5bb0, clickElement {id=7ca57ed9-cc9e-4174-8215-1d3abe64ec96}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 21340, moz:profile: C:\Users\KARTHI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (ef3de1d6-e262-44bb-afbc-4e7c457b5bb0)] -&gt; xpath: //tr[@class=&apos;contactTableBodyRow&apos;][1]]
+Session ID: ef3de1d6-e262-44bb-afbc-4e7c457b5bb0
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pageclass.ContactListPage.clickFirstContact(ContactListPage.java:42)
+	at testcases.EditContactTest.testEditValidationMissingField(EditContactTest.java:110)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m38">testcases.RegistrationTest#testRegistrationWithExistingEmail</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //input[@id=&apos;firstName&apos;]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [3c151cd1-199d-4a09-94a9-43ea529377fb, findElement {value=//input[@id=&apos;firstName&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12900, moz:profile: C:\Users\KARTHI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 3c151cd1-199d-4a09-94a9-43ea529377fb
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.clear(Unknown Source)
+	at pageclass.RegistrationPage.enterFirstname(RegistrationPage.java:45)
+	at pageclass.RegistrationPage.registerUser(RegistrationPage.java:66)
+	at testcases.RegistrationTest.testRegistrationWithExistingEmail(RegistrationTest.java:78)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m39">testcases.SessionNavigationTest#verifyLoginRequiredForContactList</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to be &quot;https://thinking-tester-contact-list.herokuapp.com/&quot;. Current url: &quot;https://thinking-tester-contact-list.herokuapp.com/contactList&quot; (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 1636, moz:profile: C:\Users\KARTHI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 32e31be9-ff76-439d-a94e-bb2e1db7e7ed
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at testcases.SessionNavigationTest.verifyLoginRequiredForContactList(SessionNavigationTest.java:103)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m40">testcases.UITest#testContactFormAlignment</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Right Column Alignment Failed (Phone vs LastName) expected [446] but found [356]
+	at testcases.UITest.testContactFormAlignment(UITest.java:78)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 21 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m41">testcases.AddContactTest#testAddContactMissingRequiredFields</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m42">testcases.AddContactTest#testAddValidContact</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m43">testcases.AddContactTest#testDuplicateContactBehavior</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m44">testcases.AddContactTest#testFormResetAfterAddition</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m45">testcases.AddContactTest#testInvalidPhoneInput</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m46">testcases.InputValidationTest#testMaxCharacterLimit</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m47">testcases.InputValidationTest#testUnicodeAndEmojis</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m48">testcases.LoginTest#testInvalidEmailFormat</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m49">testcases.LoginTest#testLoginWithEmptyFields</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m50">testcases.LoginTest#testLoginWithIncorrectPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m51">testcases.LoginTest#testPasswordMasking</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m52">testcases.LoginTest#testValidLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m53">testcases.RegistrationTest#testInvalidRegistrationScenarios</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>Kadamba</td><td>vel</td><td>valid1766750284199@test.com</td><td>123</td><td>is shorter than the minimum allowed length (7)</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m54">testcases.RegistrationTest#testInvalidRegistrationScenarios</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>Kadamba</td><td></td><td>valid1766750284199@test.com</td><td>Password123!</td><td>lastName` is required</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m55">testcases.RegistrationTest#testInvalidRegistrationScenarios</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>Kadamba</td><td>vel</td><td>valid1766750284199@valid</td><td>Password123$</td><td>Email is invalid</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m56">testcases.RegistrationTest#testInvalidRegistrationScenarios</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>Kadamba</td><td>vel</td><td>valid1766750284199@test.com</td><td></td><td>password` is required</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m57">testcases.RegistrationTest#testInvalidRegistrationScenarios</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>Kadamba</td><td>vel</td><td></td><td>Password123!</td><td>Email is invalid</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m58">testcases.RegistrationTest#testInvalidRegistrationScenarios</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td></td><td>vel</td><td>valid1766750284199@test.com</td><td>Password123!</td><td>firstName` is required</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m59">testcases.RegistrationTest#testValidSignup</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m60">testcases.SessionNavigationTest#logout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m61">testcases.SessionNavigationTest#verifyBackAfterLogout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m62">testcases.SessionNavigationTest#verifyLoginPersistsOnRefresh</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m63">testcases.UITest#testActionSuccessIndicator</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

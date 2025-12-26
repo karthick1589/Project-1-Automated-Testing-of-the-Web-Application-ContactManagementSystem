@@ -1,0 +1,810 @@
+<html>
+<head>
+<title>TestNG:  Firefox Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Firefox Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>23/9/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Dec 26 17:27:31 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>623 seconds (623627 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.EditContactTest.testCancelEdit()'><b>testCancelEdit</b><br>Test class: testcases.EditContactTest</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: Element &lt;tr class=&quot;contactTableBodyRow&quot;&gt; could not be scrolled into view
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [06dd889b-c5a6-42c4-8eb1-1643d376b0d3, clickElement {id=c748cdb1-7502-43ae-becf-d5f7bda17b02}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11316, moz:profile: C:\Users\KARTHI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (06dd889b-c5a6-42c4-8eb1-1643d376b0d3)] -&gt; xpath: //tr[@class=&apos;contactTableBodyRow&apos;][1]]
+Session ID: 06dd889b-c5a6-42c4-8eb1-1643d376b0d3
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pageclass.ContactListPage.clickFirstContact(ContactListPage.java:42)
+	at testcases.EditContactTest.testCancelEdit(EditContactTest.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1486565899", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1486565899'><pre>org.openqa.selenium.ElementNotInteractableException: Element &lt;tr class=&quot;contactTableBodyRow&quot;&gt; could not be scrolled into view
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [06dd889b-c5a6-42c4-8eb1-1643d376b0d3, clickElement {id=c748cdb1-7502-43ae-becf-d5f7bda17b02}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11316, moz:profile: C:\Users\KARTHI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (06dd889b-c5a6-42c4-8eb1-1643d376b0d3)] -&gt; xpath: //tr[@class=&apos;contactTableBodyRow&apos;][1]]
+Session ID: 06dd889b-c5a6-42c4-8eb1-1643d376b0d3
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pageclass.ContactListPage.clickFirstContact(ContactListPage.java:42)
+	at testcases.EditContactTest.testCancelEdit(EditContactTest.java:84)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>1</td>
+<td>testcases.EditContactTest@75d4a5c2</td></tr>
+<tr>
+<td title='testcases.UITest.testContactFormAlignment()'><b>testContactFormAlignment</b><br>Test class: testcases.UITest</td>
+<td><div><pre>java.lang.AssertionError: Right Column Alignment Failed (Phone vs LastName) expected [446] but found [356]
+	at testcases.UITest.testContactFormAlignment(UITest.java:78)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2124640866", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2124640866'><pre>java.lang.AssertionError: Right Column Alignment Failed (Phone vs LastName) expected [446] but found [356]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at testcases.UITest.testContactFormAlignment(UITest.java:78)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>1</td>
+<td>testcases.UITest@6c6cb480</td></tr>
+<tr>
+<td title='testcases.DeleteContactTest.testDeleteContactAlert()'><b>testDeleteContactAlert</b><br>Test class: testcases.DeleteContactTest</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: Element &lt;tr class=&quot;contactTableBodyRow&quot;&gt; could not be scrolled into view
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [9254177d-290e-4111-aabc-e209e6229632, clickElement {id=e0b5f8b3-03cd-4c28-b96a-10dff270d909}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 18652, moz:profile: C:\Users\KARTHI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (9254177d-290e-4111-aabc-e209e6229632)] -&gt; xpath: //tr[@class=&apos;contactTableBodyRow&apos;][1]]
+Session ID: 9254177d-290e-4111-aabc-e209e6229632
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pageclass.ContactListPage.clickFirstContact(ContactListPage.java:42)
+	at testcases.DeleteContactTest.testDeleteContactAlert(DeleteContactTest.java:81)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2070745855", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2070745855'><pre>org.openqa.selenium.ElementNotInteractableException: Element &lt;tr class=&quot;contactTableBodyRow&quot;&gt; could not be scrolled into view
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [9254177d-290e-4111-aabc-e209e6229632, clickElement {id=e0b5f8b3-03cd-4c28-b96a-10dff270d909}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 18652, moz:profile: C:\Users\KARTHI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (9254177d-290e-4111-aabc-e209e6229632)] -&gt; xpath: //tr[@class=&apos;contactTableBodyRow&apos;][1]]
+Session ID: 9254177d-290e-4111-aabc-e209e6229632
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pageclass.ContactListPage.clickFirstContact(ContactListPage.java:42)
+	at testcases.DeleteContactTest.testDeleteContactAlert(DeleteContactTest.java:81)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>0</td>
+<td>testcases.DeleteContactTest@557caf28</td></tr>
+<tr>
+<td title='testcases.EditContactTest.testEditContactSuccessfully()'><b>testEditContactSuccessfully</b><br>Test class: testcases.EditContactTest</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: Element &lt;tr class=&quot;contactTableBodyRow&quot;&gt; could not be scrolled into view
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [54d5c4c2-8360-4044-a3ad-93a458b0ed82, clickElement {id=a3be01d8-d95f-4a85-83ba-695898d97117}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 10432, moz:profile: C:\Users\KARTHI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (54d5c4c2-8360-4044-a3ad-93a458b0ed82)] -&gt; xpath: //tr[@class=&apos;contactTableBodyRow&apos;][1]]
+Session ID: 54d5c4c2-8360-4044-a3ad-93a458b0ed82
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pageclass.ContactListPage.clickFirstContact(ContactListPage.java:42)
+	at testcases.EditContactTest.testEditContactSuccessfully(EditContactTest.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace177825374", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace177825374'><pre>org.openqa.selenium.ElementNotInteractableException: Element &lt;tr class=&quot;contactTableBodyRow&quot;&gt; could not be scrolled into view
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [54d5c4c2-8360-4044-a3ad-93a458b0ed82, clickElement {id=a3be01d8-d95f-4a85-83ba-695898d97117}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 10432, moz:profile: C:\Users\KARTHI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (54d5c4c2-8360-4044-a3ad-93a458b0ed82)] -&gt; xpath: //tr[@class=&apos;contactTableBodyRow&apos;][1]]
+Session ID: 54d5c4c2-8360-4044-a3ad-93a458b0ed82
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pageclass.ContactListPage.clickFirstContact(ContactListPage.java:42)
+	at testcases.EditContactTest.testEditContactSuccessfully(EditContactTest.java:40)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>1</td>
+<td>testcases.EditContactTest@75d4a5c2</td></tr>
+<tr>
+<td title='testcases.RegistrationTest.testRegistrationWithExistingEmail()'><b>testRegistrationWithExistingEmail</b><br>Test class: testcases.RegistrationTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //input[@id=&apos;firstName&apos;]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [3c151cd1-199d-4a09-94a9-43ea529377fb, findElement {value=//input[@id=&apos;firstName&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12900, moz:profile: C:\Users\KARTHI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 3c151cd1-199d-4a09-94a9-43ea529377fb
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.clear(Unknown Source)
+	at pageclass.RegistrationPage.enterFirstname(RegistrationPage.java:45)
+	at pageclass.RegistrationPage.registerUser(RegistrationPage.java:66)
+	at testcases.RegistrationTest.testRegistrationWithExistingEmail(RegistrationTest.java:78)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace887343995", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace887343995'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //input[@id=&apos;firstName&apos;]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [3c151cd1-199d-4a09-94a9-43ea529377fb, findElement {value=//input[@id=&apos;firstName&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12900, moz:profile: C:\Users\KARTHI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 3c151cd1-199d-4a09-94a9-43ea529377fb
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.clear(Unknown Source)
+	at pageclass.RegistrationPage.enterFirstname(RegistrationPage.java:45)
+	at pageclass.RegistrationPage.registerUser(RegistrationPage.java:66)
+	at testcases.RegistrationTest.testRegistrationWithExistingEmail(RegistrationTest.java:78)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>26</td>
+<td>testcases.RegistrationTest@1d296da</td></tr>
+<tr>
+<td title='testcases.DeleteContactTest.testDeleteContactPermanently()'><b>testDeleteContactPermanently</b><br>Test class: testcases.DeleteContactTest</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: Element &lt;tr class=&quot;contactTableBodyRow&quot;&gt; could not be scrolled into view
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [3cdb12c2-6851-412a-94d0-66fc6f931d14, clickElement {id=7aea0832-3a2c-491a-8c72-588790a5e2c9}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 18896, moz:profile: C:\Users\KARTHI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (3cdb12c2-6851-412a-94d0-66fc6f931d14)] -&gt; xpath: //tr[@class=&apos;contactTableBodyRow&apos;][1]]
+Session ID: 3cdb12c2-6851-412a-94d0-66fc6f931d14
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pageclass.ContactListPage.clickFirstContact(ContactListPage.java:42)
+	at testcases.DeleteContactTest.testDeleteContactPermanently(DeleteContactTest.java:120)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1126462285", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1126462285'><pre>org.openqa.selenium.ElementNotInteractableException: Element &lt;tr class=&quot;contactTableBodyRow&quot;&gt; could not be scrolled into view
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [3cdb12c2-6851-412a-94d0-66fc6f931d14, clickElement {id=7aea0832-3a2c-491a-8c72-588790a5e2c9}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 18896, moz:profile: C:\Users\KARTHI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (3cdb12c2-6851-412a-94d0-66fc6f931d14)] -&gt; xpath: //tr[@class=&apos;contactTableBodyRow&apos;][1]]
+Session ID: 3cdb12c2-6851-412a-94d0-66fc6f931d14
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pageclass.ContactListPage.clickFirstContact(ContactListPage.java:42)
+	at testcases.DeleteContactTest.testDeleteContactPermanently(DeleteContactTest.java:120)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>0</td>
+<td>testcases.DeleteContactTest@557caf28</td></tr>
+<tr>
+<td title='testcases.EditContactTest.testEditValidationMissingField()'><b>testEditValidationMissingField</b><br>Test class: testcases.EditContactTest</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: Element &lt;tr class=&quot;contactTableBodyRow&quot;&gt; could not be scrolled into view
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [ef3de1d6-e262-44bb-afbc-4e7c457b5bb0, clickElement {id=7ca57ed9-cc9e-4174-8215-1d3abe64ec96}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 21340, moz:profile: C:\Users\KARTHI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (ef3de1d6-e262-44bb-afbc-4e7c457b5bb0)] -&gt; xpath: //tr[@class=&apos;contactTableBodyRow&apos;][1]]
+Session ID: ef3de1d6-e262-44bb-afbc-4e7c457b5bb0
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pageclass.ContactListPage.clickFirstContact(ContactListPage.java:42)
+	at testcases.EditContactTest.testEditValidationMissingField(EditContactTest.java:110)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1249244233", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1249244233'><pre>org.openqa.selenium.ElementNotInteractableException: Element &lt;tr class=&quot;contactTableBodyRow&quot;&gt; could not be scrolled into view
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [ef3de1d6-e262-44bb-afbc-4e7c457b5bb0, clickElement {id=7ca57ed9-cc9e-4174-8215-1d3abe64ec96}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 21340, moz:profile: C:\Users\KARTHI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (ef3de1d6-e262-44bb-afbc-4e7c457b5bb0)] -&gt; xpath: //tr[@class=&apos;contactTableBodyRow&apos;][1]]
+Session ID: ef3de1d6-e262-44bb-afbc-4e7c457b5bb0
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pageclass.ContactListPage.clickFirstContact(ContactListPage.java:42)
+	at testcases.EditContactTest.testEditValidationMissingField(EditContactTest.java:110)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>2</td>
+<td>testcases.EditContactTest@75d4a5c2</td></tr>
+<tr>
+<td title='testcases.SessionNavigationTest.verifyLoginRequiredForContactList()'><b>verifyLoginRequiredForContactList</b><br>Test class: testcases.SessionNavigationTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to be &quot;https://thinking-tester-contact-list.herokuapp.com/&quot;. Current url: &quot;https://thinking-tester-contact-list.herokuapp.com/contactList&quot; (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 1636, moz:profile: C:\Users\KARTHI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 32e31be9-ff76-439d-a94e-bb2e1db7e7ed
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at testcases.SessionNavigationTest.verifyLoginRequiredForContactList(SessionNavigationTest.java:103)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1990228221", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1990228221'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to be &quot;https://thinking-tester-contact-list.herokuapp.com/&quot;. Current url: &quot;https://thinking-tester-contact-list.herokuapp.com/contactList&quot; (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 1636, moz:profile: C:\Users\KARTHI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 32e31be9-ff76-439d-a94e-bb2e1db7e7ed
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at testcases.SessionNavigationTest.verifyLoginRequiredForContactList(SessionNavigationTest.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>12</td>
+<td>testcases.SessionNavigationTest@408d971b</td></tr>
+<tr>
+<td title='testcases.DeleteContactTest.testSelectSpecificContact()'><b>testSelectSpecificContact</b><br>Test class: testcases.DeleteContactTest</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: Element &lt;tr class=&quot;contactTableBodyRow&quot;&gt; could not be scrolled into view
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [dfdaf53b-0806-4bde-b7e9-b8ff29c316a2, clickElement {id=e2efbe62-cc4f-4c90-be84-22e7ab546522}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 4500, moz:profile: C:\Users\KARTHI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (dfdaf53b-0806-4bde-b7e9-b8ff29c316a2)] -&gt; class name: contactTableBodyRow]
+Session ID: dfdaf53b-0806-4bde-b7e9-b8ff29c316a2
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pageclass.ContactListPage.clickContactByIndex(ContactListPage.java:58)
+	at testcases.DeleteContactTest.testSelectSpecificContact(DeleteContactTest.java:53)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2070615060", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2070615060'><pre>org.openqa.selenium.ElementNotInteractableException: Element &lt;tr class=&quot;contactTableBodyRow&quot;&gt; could not be scrolled into view
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [dfdaf53b-0806-4bde-b7e9-b8ff29c316a2, clickElement {id=e2efbe62-cc4f-4c90-be84-22e7ab546522}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 4500, moz:profile: C:\Users\KARTHI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (dfdaf53b-0806-4bde-b7e9-b8ff29c316a2)] -&gt; class name: contactTableBodyRow]
+Session ID: dfdaf53b-0806-4bde-b7e9-b8ff29c316a2
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pageclass.ContactListPage.clickContactByIndex(ContactListPage.java:58)
+	at testcases.DeleteContactTest.testSelectSpecificContact(DeleteContactTest.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>0</td>
+<td>testcases.DeleteContactTest@557caf28</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.RegistrationTest.testInvalidRegistrationScenarios()'><b>testInvalidRegistrationScenarios</b><br>Test class: testcases.RegistrationTest<br>Parameters: Kadamba, vel, valid1766750284199@test.com, 123, is shorter than the minimum allowed length (7)</td>
+<td></td>
+<td>2</td>
+<td>testcases.RegistrationTest@1d296da</td></tr>
+<tr>
+<td title='testcases.SessionNavigationTest.verifyLoginPersistsOnRefresh()'><b>verifyLoginPersistsOnRefresh</b><br>Test class: testcases.SessionNavigationTest</td>
+<td></td>
+<td>2</td>
+<td>testcases.SessionNavigationTest@408d971b</td></tr>
+<tr>
+<td title='testcases.InputValidationTest.testMaxCharacterLimit()'><b>testMaxCharacterLimit</b><br>Test class: testcases.InputValidationTest</td>
+<td></td>
+<td>2</td>
+<td>testcases.InputValidationTest@3c46e67a</td></tr>
+<tr>
+<td title='testcases.AddContactTest.testDuplicateContactBehavior()'><b>testDuplicateContactBehavior</b><br>Test class: testcases.AddContactTest</td>
+<td></td>
+<td>9</td>
+<td>testcases.AddContactTest@7c7a06ec</td></tr>
+<tr>
+<td title='testcases.RegistrationTest.testInvalidRegistrationScenarios()'><b>testInvalidRegistrationScenarios</b><br>Test class: testcases.RegistrationTest<br>Parameters: Kadamba, , valid1766750284199@test.com, Password123!, lastName` is required</td>
+<td></td>
+<td>2</td>
+<td>testcases.RegistrationTest@1d296da</td></tr>
+<tr>
+<td title='testcases.RegistrationTest.testInvalidRegistrationScenarios()'><b>testInvalidRegistrationScenarios</b><br>Test class: testcases.RegistrationTest<br>Parameters: Kadamba, vel, valid1766750284199@valid, Password123$, Email is invalid</td>
+<td></td>
+<td>3</td>
+<td>testcases.RegistrationTest@1d296da</td></tr>
+<tr>
+<td title='testcases.LoginTest.testPasswordMasking()'><b>testPasswordMasking</b><br>Test class: testcases.LoginTest</td>
+<td></td>
+<td>0</td>
+<td>testcases.LoginTest@776aec5c</td></tr>
+<tr>
+<td title='testcases.AddContactTest.testFormResetAfterAddition()'><b>testFormResetAfterAddition</b><br>Test class: testcases.AddContactTest</td>
+<td></td>
+<td>4</td>
+<td>testcases.AddContactTest@7c7a06ec</td></tr>
+<tr>
+<td title='testcases.SessionNavigationTest.verifyBackAfterLogout()'><b>verifyBackAfterLogout</b><br>Test class: testcases.SessionNavigationTest</td>
+<td></td>
+<td>23</td>
+<td>testcases.SessionNavigationTest@408d971b</td></tr>
+<tr>
+<td title='testcases.AddContactTest.testAddValidContact()'><b>testAddValidContact</b><br>Test class: testcases.AddContactTest</td>
+<td></td>
+<td>6</td>
+<td>testcases.AddContactTest@7c7a06ec</td></tr>
+<tr>
+<td title='testcases.InputValidationTest.testUnicodeAndEmojis()'><b>testUnicodeAndEmojis</b><br>Test class: testcases.InputValidationTest</td>
+<td></td>
+<td>6</td>
+<td>testcases.InputValidationTest@3c46e67a</td></tr>
+<tr>
+<td title='testcases.LoginTest.testLoginWithEmptyFields()'><b>testLoginWithEmptyFields</b><br>Test class: testcases.LoginTest</td>
+<td></td>
+<td>0</td>
+<td>testcases.LoginTest@776aec5c</td></tr>
+<tr>
+<td title='testcases.RegistrationTest.testValidSignup()'><b>testValidSignup</b><br>Test class: testcases.RegistrationTest</td>
+<td></td>
+<td>3</td>
+<td>testcases.RegistrationTest@1d296da</td></tr>
+<tr>
+<td title='testcases.RegistrationTest.testInvalidRegistrationScenarios()'><b>testInvalidRegistrationScenarios</b><br>Test class: testcases.RegistrationTest<br>Parameters: Kadamba, vel, valid1766750284199@test.com, , password` is required</td>
+<td></td>
+<td>2</td>
+<td>testcases.RegistrationTest@1d296da</td></tr>
+<tr>
+<td title='testcases.RegistrationTest.testInvalidRegistrationScenarios()'><b>testInvalidRegistrationScenarios</b><br>Test class: testcases.RegistrationTest<br>Parameters: Kadamba, vel, , Password123!, Email is invalid</td>
+<td></td>
+<td>2</td>
+<td>testcases.RegistrationTest@1d296da</td></tr>
+<tr>
+<td title='testcases.UITest.testActionSuccessIndicator()'><b>testActionSuccessIndicator</b><br>Test class: testcases.UITest</td>
+<td></td>
+<td>4</td>
+<td>testcases.UITest@6c6cb480</td></tr>
+<tr>
+<td title='testcases.AddContactTest.testAddContactMissingRequiredFields()'><b>testAddContactMissingRequiredFields</b><br>Test class: testcases.AddContactTest</td>
+<td></td>
+<td>3</td>
+<td>testcases.AddContactTest@7c7a06ec</td></tr>
+<tr>
+<td title='testcases.RegistrationTest.testInvalidRegistrationScenarios()'><b>testInvalidRegistrationScenarios</b><br>Test class: testcases.RegistrationTest<br>Parameters: , vel, valid1766750284199@test.com, Password123!, firstName` is required</td>
+<td></td>
+<td>2</td>
+<td>testcases.RegistrationTest@1d296da</td></tr>
+<tr>
+<td title='testcases.SessionNavigationTest.logout()'><b>logout</b><br>Test class: testcases.SessionNavigationTest</td>
+<td></td>
+<td>2</td>
+<td>testcases.SessionNavigationTest@408d971b</td></tr>
+<tr>
+<td title='testcases.LoginTest.testInvalidEmailFormat()'><b>testInvalidEmailFormat</b><br>Test class: testcases.LoginTest</td>
+<td></td>
+<td>1</td>
+<td>testcases.LoginTest@776aec5c</td></tr>
+<tr>
+<td title='testcases.LoginTest.testValidLogin()'><b>testValidLogin</b><br>Test class: testcases.LoginTest</td>
+<td></td>
+<td>1</td>
+<td>testcases.LoginTest@776aec5c</td></tr>
+<tr>
+<td title='testcases.LoginTest.testLoginWithIncorrectPassword()'><b>testLoginWithIncorrectPassword</b><br>Test class: testcases.LoginTest</td>
+<td></td>
+<td>0</td>
+<td>testcases.LoginTest@776aec5c</td></tr>
+<tr>
+<td title='testcases.AddContactTest.testInvalidPhoneInput()'><b>testInvalidPhoneInput</b><br>Test class: testcases.AddContactTest</td>
+<td></td>
+<td>3</td>
+<td>testcases.AddContactTest@7c7a06ec</td></tr>
+</table><p>
+</body>
+</html>

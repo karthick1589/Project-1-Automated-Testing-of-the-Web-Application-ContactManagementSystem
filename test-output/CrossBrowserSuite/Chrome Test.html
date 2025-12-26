@@ -1,0 +1,501 @@
+<html>
+<head>
+<title>TestNG:  Chrome Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Chrome Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>27/5/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Dec 26 17:27:31 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>457 seconds (457375 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.EditContactTest.testEditContactSuccessfully()'><b>testEditContactSuccessfully</b><br>Test class: testcases.EditContactTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for text (&apos;update1766750501050@test.com&apos;) to be present in element [[ChromeDriver: chrome on windows (e856d5ef94adedf7d3530c4ec3f6d4aa)] -&gt; id: email] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\KARTHI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56178}, goog:processID: 12712, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56178/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e856d5ef94adedf7d3530c4ec3f6d4aa
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pageclass.ContactDetailsPage.waitForUpdatedEmail(ContactDetailsPage.java:45)
+	at testcases.EditContactTest.testEditContactSuccessfully(EditContactTest.java:58)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2109077846", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2109077846'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for text (&apos;update1766750501050@test.com&apos;) to be present in element [[ChromeDriver: chrome on windows (e856d5ef94adedf7d3530c4ec3f6d4aa)] -&gt; id: email] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\KARTHI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56178}, goog:processID: 12712, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56178/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e856d5ef94adedf7d3530c4ec3f6d4aa
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pageclass.ContactDetailsPage.waitForUpdatedEmail(ContactDetailsPage.java:45)
+	at testcases.EditContactTest.testEditContactSuccessfully(EditContactTest.java:58)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>19</td>
+<td>testcases.EditContactTest@799f10e1</td></tr>
+<tr>
+<td title='testcases.EditContactTest.testEditValidationMissingField()'><b>testEditValidationMissingField</b><br>Test class: testcases.EditContactTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.id: error&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pageclass.AddContactPage.getErrorMessage(AddContactPage.java:60)
+	at testcases.EditContactTest.testEditValidationMissingField(EditContactTest.java:121)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#error&quot;}
+  (Session info: chrome=143.0.7499.170)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [769e160f876004a474e8ca65fbffe50c, findElement {value=error, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\KARTHI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52992}, goog:processID: 5892, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52992/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 769e160f876004a474e8ca65fbffe50c
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:308)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:294)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:291)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 22 more
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1723334753", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1723334753'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.id: error&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pageclass.AddContactPage.getErrorMessage(AddContactPage.java:60)
+	at testcases.EditContactTest.testEditValidationMissingField(EditContactTest.java:121)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#error&quot;}
+  (Session info: chrome=143.0.7499.170)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [769e160f876004a474e8ca65fbffe50c, findElement {value=error, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\KARTHI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52992}, goog:processID: 5892, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52992/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 769e160f876004a474e8ca65fbffe50c
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:308)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:294)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:291)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 22 more
+</pre></div></td>
+<td>47</td>
+<td>testcases.EditContactTest@799f10e1</td></tr>
+<tr>
+<td title='testcases.UITest.testContactFormAlignment()'><b>testContactFormAlignment</b><br>Test class: testcases.UITest</td>
+<td><div><pre>java.lang.AssertionError: Right Column Alignment Failed (Phone vs LastName) expected [451] but found [361]
+	at testcases.UITest.testContactFormAlignment(UITest.java:78)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace567657801", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace567657801'><pre>java.lang.AssertionError: Right Column Alignment Failed (Phone vs LastName) expected [451] but found [361]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at testcases.UITest.testContactFormAlignment(UITest.java:78)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>1</td>
+<td>testcases.UITest@3023df74</td></tr>
+<tr>
+<td title='testcases.SessionNavigationTest.verifyLoginRequiredForContactList()'><b>verifyLoginRequiredForContactList</b><br>Test class: testcases.SessionNavigationTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to be &quot;https://thinking-tester-contact-list.herokuapp.com/&quot;. Current url: &quot;https://thinking-tester-contact-list.herokuapp.com/contactList&quot; (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\KARTHI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56040}, goog:processID: 3456, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56040/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0bc40a980168c3453f8cfa79908f0163
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at testcases.SessionNavigationTest.verifyLoginRequiredForContactList(SessionNavigationTest.java:103)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace41463253", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace41463253'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to be &quot;https://thinking-tester-contact-list.herokuapp.com/&quot;. Current url: &quot;https://thinking-tester-contact-list.herokuapp.com/contactList&quot; (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\KARTHI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56040}, goog:processID: 3456, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56040/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0bc40a980168c3453f8cfa79908f0163
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at testcases.SessionNavigationTest.verifyLoginRequiredForContactList(SessionNavigationTest.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>11</td>
+<td>testcases.SessionNavigationTest@145f66e3</td></tr>
+<tr>
+<td title='testcases.DeleteContactTest.testDeleteContactPermanently()'><b>testDeleteContactPermanently</b><br>Test class: testcases.DeleteContactTest</td>
+<td><div><pre>java.lang.AssertionError: Contact was not deleted successfully.
+	at testcases.DeleteContactTest.testDeleteContactPermanently(DeleteContactTest.java:143)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace465071670", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace465071670'><pre>java.lang.AssertionError: Contact was not deleted successfully.
+	at org.testng.Assert.fail(Assert.java:111)
+	at testcases.DeleteContactTest.testDeleteContactPermanently(DeleteContactTest.java:143)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>5</td>
+<td>testcases.DeleteContactTest@4c371370</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.LoginTest.testInvalidEmailFormat()'><b>testInvalidEmailFormat</b><br>Test class: testcases.LoginTest</td>
+<td></td>
+<td>1</td>
+<td>testcases.LoginTest@223191a6</td></tr>
+<tr>
+<td title='testcases.RegistrationTest.testInvalidRegistrationScenarios()'><b>testInvalidRegistrationScenarios</b><br>Test class: testcases.RegistrationTest<br>Parameters: , vel, valid1766750269813@test.com, Password123!, firstName` is required</td>
+<td></td>
+<td>3</td>
+<td>testcases.RegistrationTest@1b7cc17c</td></tr>
+<tr>
+<td title='testcases.SessionNavigationTest.verifyBackAfterLogout()'><b>verifyBackAfterLogout</b><br>Test class: testcases.SessionNavigationTest</td>
+<td></td>
+<td>22</td>
+<td>testcases.SessionNavigationTest@145f66e3</td></tr>
+<tr>
+<td title='testcases.RegistrationTest.testInvalidRegistrationScenarios()'><b>testInvalidRegistrationScenarios</b><br>Test class: testcases.RegistrationTest<br>Parameters: Kadamba, vel, , Password123!, Email is invalid</td>
+<td></td>
+<td>3</td>
+<td>testcases.RegistrationTest@1b7cc17c</td></tr>
+<tr>
+<td title='testcases.AddContactTest.testAddContactMissingRequiredFields()'><b>testAddContactMissingRequiredFields</b><br>Test class: testcases.AddContactTest</td>
+<td></td>
+<td>3</td>
+<td>testcases.AddContactTest@59662a0b</td></tr>
+<tr>
+<td title='testcases.DeleteContactTest.testSelectSpecificContact()'><b>testSelectSpecificContact</b><br>Test class: testcases.DeleteContactTest</td>
+<td></td>
+<td>3</td>
+<td>testcases.DeleteContactTest@4c371370</td></tr>
+<tr>
+<td title='testcases.LoginTest.testLoginWithIncorrectPassword()'><b>testLoginWithIncorrectPassword</b><br>Test class: testcases.LoginTest</td>
+<td></td>
+<td>3</td>
+<td>testcases.LoginTest@223191a6</td></tr>
+<tr>
+<td title='testcases.RegistrationTest.testRegistrationWithExistingEmail()'><b>testRegistrationWithExistingEmail</b><br>Test class: testcases.RegistrationTest</td>
+<td></td>
+<td>13</td>
+<td>testcases.RegistrationTest@1b7cc17c</td></tr>
+<tr>
+<td title='testcases.LoginTest.testValidLogin()'><b>testValidLogin</b><br>Test class: testcases.LoginTest</td>
+<td></td>
+<td>2</td>
+<td>testcases.LoginTest@223191a6</td></tr>
+<tr>
+<td title='testcases.EditContactTest.testCancelEdit()'><b>testCancelEdit</b><br>Test class: testcases.EditContactTest</td>
+<td></td>
+<td>7</td>
+<td>testcases.EditContactTest@799f10e1</td></tr>
+<tr>
+<td title='testcases.InputValidationTest.testMaxCharacterLimit()'><b>testMaxCharacterLimit</b><br>Test class: testcases.InputValidationTest</td>
+<td></td>
+<td>4</td>
+<td>testcases.InputValidationTest@313ac989</td></tr>
+<tr>
+<td title='testcases.AddContactTest.testAddValidContact()'><b>testAddValidContact</b><br>Test class: testcases.AddContactTest</td>
+<td></td>
+<td>6</td>
+<td>testcases.AddContactTest@59662a0b</td></tr>
+<tr>
+<td title='testcases.SessionNavigationTest.logout()'><b>logout</b><br>Test class: testcases.SessionNavigationTest</td>
+<td></td>
+<td>2</td>
+<td>testcases.SessionNavigationTest@145f66e3</td></tr>
+<tr>
+<td title='testcases.AddContactTest.testDuplicateContactBehavior()'><b>testDuplicateContactBehavior</b><br>Test class: testcases.AddContactTest</td>
+<td></td>
+<td>7</td>
+<td>testcases.AddContactTest@59662a0b</td></tr>
+<tr>
+<td title='testcases.SessionNavigationTest.verifyLoginPersistsOnRefresh()'><b>verifyLoginPersistsOnRefresh</b><br>Test class: testcases.SessionNavigationTest</td>
+<td></td>
+<td>2</td>
+<td>testcases.SessionNavigationTest@145f66e3</td></tr>
+<tr>
+<td title='testcases.DeleteContactTest.testDeleteContactAlert()'><b>testDeleteContactAlert</b><br>Test class: testcases.DeleteContactTest</td>
+<td></td>
+<td>1</td>
+<td>testcases.DeleteContactTest@4c371370</td></tr>
+<tr>
+<td title='testcases.UITest.testActionSuccessIndicator()'><b>testActionSuccessIndicator</b><br>Test class: testcases.UITest</td>
+<td></td>
+<td>5</td>
+<td>testcases.UITest@3023df74</td></tr>
+<tr>
+<td title='testcases.LoginTest.testLoginWithEmptyFields()'><b>testLoginWithEmptyFields</b><br>Test class: testcases.LoginTest</td>
+<td></td>
+<td>1</td>
+<td>testcases.LoginTest@223191a6</td></tr>
+<tr>
+<td title='testcases.InputValidationTest.testUnicodeAndEmojis()'><b>testUnicodeAndEmojis</b><br>Test class: testcases.InputValidationTest</td>
+<td></td>
+<td>7</td>
+<td>testcases.InputValidationTest@313ac989</td></tr>
+<tr>
+<td title='testcases.AddContactTest.testInvalidPhoneInput()'><b>testInvalidPhoneInput</b><br>Test class: testcases.AddContactTest</td>
+<td></td>
+<td>6</td>
+<td>testcases.AddContactTest@59662a0b</td></tr>
+<tr>
+<td title='testcases.AddContactTest.testFormResetAfterAddition()'><b>testFormResetAfterAddition</b><br>Test class: testcases.AddContactTest</td>
+<td></td>
+<td>7</td>
+<td>testcases.AddContactTest@59662a0b</td></tr>
+<tr>
+<td title='testcases.RegistrationTest.testInvalidRegistrationScenarios()'><b>testInvalidRegistrationScenarios</b><br>Test class: testcases.RegistrationTest<br>Parameters: Kadamba, vel, valid1766750269813@test.com, 123, is shorter than the minimum allowed length (7)</td>
+<td></td>
+<td>4</td>
+<td>testcases.RegistrationTest@1b7cc17c</td></tr>
+<tr>
+<td title='testcases.LoginTest.testPasswordMasking()'><b>testPasswordMasking</b><br>Test class: testcases.LoginTest</td>
+<td></td>
+<td>0</td>
+<td>testcases.LoginTest@223191a6</td></tr>
+<tr>
+<td title='testcases.RegistrationTest.testInvalidRegistrationScenarios()'><b>testInvalidRegistrationScenarios</b><br>Test class: testcases.RegistrationTest<br>Parameters: Kadamba, vel, valid1766750269813@valid, Password123$, Email is invalid</td>
+<td></td>
+<td>3</td>
+<td>testcases.RegistrationTest@1b7cc17c</td></tr>
+<tr>
+<td title='testcases.RegistrationTest.testInvalidRegistrationScenarios()'><b>testInvalidRegistrationScenarios</b><br>Test class: testcases.RegistrationTest<br>Parameters: Kadamba, , valid1766750269813@test.com, Password123!, lastName` is required</td>
+<td></td>
+<td>3</td>
+<td>testcases.RegistrationTest@1b7cc17c</td></tr>
+<tr>
+<td title='testcases.RegistrationTest.testValidSignup()'><b>testValidSignup</b><br>Test class: testcases.RegistrationTest</td>
+<td></td>
+<td>4</td>
+<td>testcases.RegistrationTest@1b7cc17c</td></tr>
+<tr>
+<td title='testcases.RegistrationTest.testInvalidRegistrationScenarios()'><b>testInvalidRegistrationScenarios</b><br>Test class: testcases.RegistrationTest<br>Parameters: Kadamba, vel, valid1766750269813@test.com, , password` is required</td>
+<td></td>
+<td>2</td>
+<td>testcases.RegistrationTest@1b7cc17c</td></tr>
+</table><p>
+</body>
+</html>
