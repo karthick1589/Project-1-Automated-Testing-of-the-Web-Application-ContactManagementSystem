@@ -5,6 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
@@ -15,14 +16,17 @@ import pageclass.RegistrationPage;
 import utilityclass.ConfigReader;
 import utilityclass.DataUtils;
 
+@Listeners(Baseclass.TestListener.class)
+
 public class RegistrationTest extends BaseTest {
 
 	@Test
 	public void testValidSignup() {
 
-		test = report.createTest("Testcase-Sign Up / Registration Functionality-2.6- Verify sign-up with valid inputs");
+		test.set(report
+				.createTest("Testcase-Sign Up / Registration Functionality-2.6- Verify sign-up with valid inputs"));
 
-		LoginPage loginPage = new LoginPage(driver);
+		LoginPage loginPage = new LoginPage(getDriver());
 
 		RegistrationPage registrationPage = loginPage.clickSignUp();
 
@@ -36,17 +40,17 @@ public class RegistrationTest extends BaseTest {
 
 		registrationPage.clickSubmit();
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.urlContains("/contactList"));
 		try {
-			Assert.assertTrue(driver.getCurrentUrl().contains("contactList"),
+			Assert.assertTrue(getDriver().getCurrentUrl().contains("contactList"),
 					"User was not redirected to Contact List after signing up.");
-			test.log(Status.PASS, "User was redirected to Contact List after signing up");
+			getTest().log(Status.PASS, "User was redirected to Contact List after signing up");
 		} catch (AssertionError e) {
-			test.log(Status.FAIL, "Test Failed: Assertion Error -" + e.getMessage());
+			getTest().log(Status.FAIL, "Test Failed: Assertion Error -" + e.getMessage());
 			throw e;
 		} catch (Exception e) {
-			test.log(Status.FAIL, "Test Failed due to Exception-" + e.getMessage());
+			getTest().log(Status.FAIL, "Test Failed due to Exception-" + e.getMessage());
 			throw e;
 		}
 
@@ -55,10 +59,9 @@ public class RegistrationTest extends BaseTest {
 	@Test
 	public void testRegistrationWithExistingEmail() {
 
-		test = report.createTest(
-				"Testcase-Sign Up / Registration Functionality-2.7- Verify registration with already registered email");
+		test.set(report.createTest("Testcase-Sign Up / Registration Functionality-2.7- Verify registration with already registered email"));
 
-		LoginPage loginPage = new LoginPage(driver);
+		LoginPage loginPage = new LoginPage(getDriver());
 		RegistrationPage registrationPage = loginPage.clickSignUp();
 
 		String duplicateEmail = "dup" + System.currentTimeMillis() + "@test.com";
@@ -68,7 +71,7 @@ public class RegistrationTest extends BaseTest {
 
 		registrationPage.clickSubmit();
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.urlContains("contactList"));
 
 		loginPage.logout();
@@ -87,12 +90,12 @@ public class RegistrationTest extends BaseTest {
 
 			Assert.assertTrue(actualError.contains("Email address is already in use")
 					|| actualError.contains("User validation failed"), "Expected 'Email already in use' error");
-			test.log(Status.PASS, "Email address is already in use");
+			getTest().log(Status.PASS, "Email address is already in use");
 		} catch (AssertionError e) {
-			test.log(Status.FAIL, "Test Failed: Assertion Error- " + e.getMessage());
+			getTest().log(Status.FAIL, "Test Failed: Assertion Error- " + e.getMessage());
 			throw e;
 		} catch (Exception e) {
-			test.log(Status.FAIL, "Test Failed due to Exception- " + e.getMessage());
+			getTest().log(Status.FAIL, "Test Failed due to Exception- " + e.getMessage());
 			throw e;
 		}
 	}
@@ -101,10 +104,10 @@ public class RegistrationTest extends BaseTest {
 	public void testInvalidRegistrationScenarios(String fName, String lName, String email, String password,
 			String expectedError) {
 
-		test = report
-				.createTest("Testcase-Sign Up / Registration Functionality-2.8- Verify registration with blank fields");
+		test.set(report.createTest(
+				"Testcase-Sign Up / Registration Functionality-2.8- Verify registration with blank fields"));
 
-		LoginPage loginPage = new LoginPage(driver);
+		LoginPage loginPage = new LoginPage(getDriver());
 		RegistrationPage regPage = loginPage.clickSignUp();
 
 		regPage.registerUser(fName, lName, email, password);
@@ -121,13 +124,13 @@ public class RegistrationTest extends BaseTest {
 			Assert.assertTrue(isMatch,
 					"Error mismatch! Expected part: [" + expectedError + "] but Found: [" + actualError + "]");
 
-			test.log(Status.PASS, "Validation successful. Found expected error: " + expectedError);
+			getTest().log(Status.PASS, "Validation successful. Found expected error: " + expectedError);
 
 		} catch (AssertionError e) {
-			test.log(Status.FAIL, "Test Failed: " + e.getMessage());
+			getTest().log(Status.FAIL, "Test Failed: " + e.getMessage());
 			throw e;
 		} catch (Exception e) {
-			test.log(Status.FAIL, "Test Failed due to Exception- " + e.getMessage());
+			getTest().log(Status.FAIL, "Test Failed due to Exception- " + e.getMessage());
 			throw e;
 		}
 	}

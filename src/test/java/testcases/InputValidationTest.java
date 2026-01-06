@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
@@ -19,6 +20,8 @@ import pageclass.ContactDetailsPage;
 import pageclass.ContactListPage;
 import pageclass.LoginPage;
 
+@Listeners(Baseclass.TestListener.class)
+
 public class InputValidationTest extends BaseTest {
 
 	LoginPage loginPage;
@@ -28,20 +31,20 @@ public class InputValidationTest extends BaseTest {
 
 	@BeforeMethod
 	public void setup() {
-		loginPage = new LoginPage(driver);
-		contactListPage = new ContactListPage(driver);
+		loginPage = new LoginPage(getDriver());
+		contactListPage = new ContactListPage(getDriver());
 
 		loginPage.login("test@set.com", "test@123$");
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.urlContains("contactList"));
 	}
 
 	@Test(priority = 1)
 	public void testMaxCharacterLimit() {
 
-		test = report.createTest(
-				"Testcase- Input Validation & Security-6.28- Verify max character limit for contact fields");
+		test.set(report.createTest(
+				"Testcase- Input Validation & Security-6.28- Verify max character limit for contact fields"));
 
 		String longName = "A".repeat(300);
 
@@ -60,12 +63,12 @@ public class InputValidationTest extends BaseTest {
 
 			Assert.assertTrue(isErrorCorrect, "Expected validation error for 300+ chars, but got: " + actualError);
 
-			test.log(Status.PASS, "Field restricts or shows error successfully");
+			getTest().log(Status.PASS, "Field restricts or shows error successfully");
 		} catch (AssertionError e) {
-			test.log(Status.FAIL, "Assertion Failed: " + e.getMessage());
+			getTest().log(Status.FAIL, "Assertion Failed: " + e.getMessage());
 			throw e;
 		} catch (Exception e) {
-			test.log(Status.FAIL, "Exception Occurred: " + e.getMessage());
+			getTest().log(Status.FAIL, "Exception Occurred: " + e.getMessage());
 			throw e;
 		}
 
@@ -74,8 +77,7 @@ public class InputValidationTest extends BaseTest {
 	@Test(priority = 2)
 	public void testUnicodeAndEmojis() throws InterruptedException {
 
-		test = report
-				.createTest("Testcase- Input Validation & Security-6.29- Verify Unicode and emojis in address field");
+		test.set(report.createTest("Testcase- Input Validation & Security-6.29- Verify Unicode and emojis in address field"));
 		String specialAddress = "123 Rainbow Rd 🌈, Tokyo 東京, España ñ";
 		String uniqueName = "Unicode" + System.currentTimeMillis();
 		String uniqueEmail = "unicode" + System.currentTimeMillis() + "@test.com";
@@ -85,9 +87,9 @@ public class InputValidationTest extends BaseTest {
 		addContactPage.fillContactForm(uniqueName, "User", "1990-01-01", uniqueEmail, "1234567890", "", "City", "St",
 				"123", "USA");
 
-		WebElement addressField = driver.findElement(By.id("street1"));
+		WebElement addressField = getDriver().findElement(By.id("street1"));
 
-		JavascriptExecutor js = (JavascriptExecutor) driver;
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
 		js.executeScript("let input = arguments[0];" + "let lastValue = input.value;" + "input.value = arguments[1];"
 				+ "let event = new Event('input', { bubbles: true });" + "let tracker = input._valueTracker;"
 				+ "if (tracker) { tracker.setValue(lastValue); }" + // Tell React the value changed
@@ -98,7 +100,7 @@ public class InputValidationTest extends BaseTest {
 
 		addContactPage.clickSubmit();
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.urlContains("contactList"));
 
 		try {
@@ -107,16 +109,16 @@ public class InputValidationTest extends BaseTest {
 			System.out.println("Original: " + specialAddress);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("street1")));
 
-			String displayedAddress = driver.findElement(By.id("street1")).getText();
+			String displayedAddress = getDriver().findElement(By.id("street1")).getText();
 			System.out.println("Displayed: " + displayedAddress);
 
 			Assert.assertEquals(displayedAddress, specialAddress, "Unicode/Emoji characters were not saved correctly!");
-			test.log(Status.PASS, "System accepts and displays them correctly.");
+			getTest().log(Status.PASS, "System accepts and displays them correctly.");
 		} catch (AssertionError e) {
-			test.log(Status.FAIL, "Assertion Failed: " + e.getMessage());
+			getTest().log(Status.FAIL, "Assertion Failed: " + e.getMessage());
 			throw e;
 		} catch (Exception e) {
-			test.log(Status.FAIL, "Exception Occurred: " + e.getMessage());
+			getTest().log(Status.FAIL, "Exception Occurred: " + e.getMessage());
 			throw e;
 		}
 	}

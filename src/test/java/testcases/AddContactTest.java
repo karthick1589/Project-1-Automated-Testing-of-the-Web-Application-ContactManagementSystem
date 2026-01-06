@@ -2,6 +2,7 @@ package testcases;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
@@ -10,6 +11,7 @@ import Baseclass.BaseTest;
 import pageclass.AddContactPage;
 import pageclass.ContactListPage;
 import pageclass.LoginPage;
+@Listeners(Baseclass.TestListener.class)
 
 public class AddContactTest extends BaseTest {
 
@@ -19,16 +21,15 @@ public class AddContactTest extends BaseTest {
 
 	@BeforeMethod
 	public void setupAndLogin() {
-		loginPage = new LoginPage(driver);
+		loginPage = new LoginPage(getDriver());
 		loginPage.login("test@set.com", "test@123$");
-		contactListPage = new ContactListPage(driver);
+		contactListPage = new ContactListPage(getDriver());
 	}
 
 	@Test(priority = 1)
 	public void testAddValidContact() {
 
-		test = report
-				.createTest("Testcase: Add Contact Functionality-3.11- Verify adding contact with all valid details");
+		test.set(report.createTest("Testcase: Add Contact Functionality-3.11- Verify adding contact with all valid details"));
 		addContactPage = contactListPage.clickAddContact();
 
 		String fname = "Kadamba" + System.currentTimeMillis();
@@ -40,12 +41,12 @@ public class AddContactTest extends BaseTest {
 		try {
 			Assert.assertTrue(contactListPage.isContactDisplayed(fname, lname),
 					"Contact was not found in the list after adding.");
-			test.log(Status.PASS, "Contact Added successfully.");
+			getTest().log(Status.PASS, "Contact Added successfully.");
 		} catch (AssertionError e) {
-			test.log(Status.FAIL, "Assertion Failed: " + e.getMessage());
+			getTest().log(Status.FAIL, "Assertion Failed: " + e.getMessage());
 			throw e;
 		} catch (Exception e) {
-			test.log(Status.FAIL, "Exception Occurred: " + e.getMessage());
+			getTest().log(Status.FAIL, "Exception Occurred: " + e.getMessage());
 			throw e;
 		}
 
@@ -54,8 +55,8 @@ public class AddContactTest extends BaseTest {
 	@Test(priority = 2)
 	public void testAddContactMissingRequiredFields() {
 
-		test = report.createTest(
-				"Testcase: Add Contact Functionality-3.12- Verify adding contact with missing required fields");
+		test.set(report.createTest(
+				"Testcase: Add Contact Functionality-3.12- Verify adding contact with missing required fields"));
 
 		addContactPage = contactListPage.clickAddContact();
 
@@ -69,12 +70,12 @@ public class AddContactTest extends BaseTest {
 					"Expected error to complain about missing firstName, but got: " + error);
 			Assert.assertTrue(error.contains("lastName") && error.contains("required"),
 					"Expected error to complain about missing lastName, but got: " + error);
-			test.log(Status.PASS, "browser shown " + error + " successfully");
+			getTest().log(Status.PASS, "browser shown " + error + " successfully");
 		} catch (AssertionError e) {
-			test.log(Status.FAIL, "Assertion Failed: " + e.getMessage());
+			getTest().log(Status.FAIL, "Assertion Failed: " + e.getMessage());
 			throw e;
 		} catch (Exception e) {
-			test.log(Status.FAIL, "Exception Occurred: " + e.getMessage());
+			getTest().log(Status.FAIL, "Exception Occurred: " + e.getMessage());
 			throw e;
 		}
 
@@ -83,8 +84,7 @@ public class AddContactTest extends BaseTest {
 	@Test(priority = 3)
 	public void testInvalidPhoneInput() {
 
-		test = report
-				.createTest("Testcase: Add Contact Functionality-3.13- Verify phone field accepts only numeric input");
+		test.set(report.createTest("Testcase: Add Contact Functionality-3.13- Verify phone field accepts only numeric input"));
 
 		addContactPage = contactListPage.clickAddContact();
 
@@ -95,12 +95,12 @@ public class AddContactTest extends BaseTest {
 		try {
 			Assert.assertTrue(error.contains("Validation failed") || error.contains("Phone"),
 					"Expected error for invalid phone format, but got: " + error);
-			test.log(Status.PASS, "Expected " + error + " shown successfully");
+			getTest().log(Status.PASS, "Expected " + error + " shown successfully");
 		} catch (AssertionError e) {
-			test.log(Status.FAIL, "Assertion Failed: " + e.getMessage());
+			getTest().log(Status.FAIL, "Assertion Failed: " + e.getMessage());
 			throw e;
 		} catch (Exception e) {
-			test.log(Status.FAIL, "Exception Occurred: " + e.getMessage());
+			getTest().log(Status.FAIL, "Exception Occurred: " + e.getMessage());
 			throw e;
 		}
 
@@ -109,7 +109,7 @@ public class AddContactTest extends BaseTest {
 	@Test(priority = 4)
 	public void testDuplicateContactBehavior() {
 
-		test = report.createTest("Testcase: Add Contact Functionality-3.14- Verify adding duplicate contact details");
+		test.set(report.createTest("Testcase: Add Contact Functionality-3.14- Verify adding duplicate contact details"));
 
 		String fname = "Duplicate";
 		String lname = "User";
@@ -125,12 +125,12 @@ public class AddContactTest extends BaseTest {
 		int count = contactListPage.getContactCount(fname);
 		try {
 			Assert.assertTrue(count >= 2, "Duplicate contact was not added (Count should be >= 2)");
-			test.log(Status.PASS, "duplicate contact details added and verified successfully");
+			getTest().log(Status.PASS, "duplicate contact details added and verified successfully");
 		} catch (AssertionError e) {
-			test.log(Status.FAIL, "Assertion Failed: " + e.getMessage());
+			getTest().log(Status.FAIL, "Assertion Failed: " + e.getMessage());
 			throw e;
 		} catch (Exception e) {
-			test.log(Status.FAIL, "Exception Occurred: " + e.getMessage());
+			getTest().log(Status.FAIL, "Exception Occurred: " + e.getMessage());
 			throw e;
 		}
 
@@ -139,7 +139,7 @@ public class AddContactTest extends BaseTest {
 	@Test(priority = 5)
 	public void testFormResetAfterAddition() {
 
-		test = report.createTest("Testcase: Add Contact Functionality-3.15- Verify form resets after contact is added");
+		test.set(report.createTest("Testcase: Add Contact Functionality-3.15- Verify form resets after contact is added"));
 
 		addContactPage = contactListPage.clickAddContact();
 		addContactPage.fillContactForm("Reset", "Test", "1990-01-01", null, null, null, null, null, null, null);
@@ -148,12 +148,12 @@ public class AddContactTest extends BaseTest {
 		addContactPage = contactListPage.clickAddContact();
 		try {
 			Assert.assertTrue(addContactPage.isFirstNameEmpty(), "Form did not reset; First Name field is not empty.");
-			test.log(Status.PASS, "Verified the form resets, after contact is added");
+			getTest().log(Status.PASS, "Verified the form resets, after contact is added");
 		} catch (AssertionError e) {
-			test.log(Status.FAIL, "Assertion Failed: " + e.getMessage());
+			getTest().log(Status.FAIL, "Assertion Failed: " + e.getMessage());
 			throw e;
 		} catch (Exception e) {
-			test.log(Status.FAIL, "Exception Occurred: " + e.getMessage());
+			getTest().log(Status.FAIL, "Exception Occurred: " + e.getMessage());
 			throw e;
 		}
 	}

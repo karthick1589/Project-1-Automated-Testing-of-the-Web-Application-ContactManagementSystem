@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
@@ -17,6 +18,8 @@ import pageclass.AddContactPage;
 import pageclass.ContactListPage;
 import pageclass.LoginPage;
 
+@Listeners(Baseclass.TestListener.class)
+
 public class UITest extends BaseTest {
 	LoginPage loginPage;
 	ContactListPage contactListPage;
@@ -24,36 +27,36 @@ public class UITest extends BaseTest {
 
 	@BeforeMethod
 	public void setup() {
-		loginPage = new LoginPage(driver);
-		contactListPage = new ContactListPage(driver);
-		addContactPage = new AddContactPage(driver);
+		loginPage = new LoginPage(getDriver());
+		contactListPage = new ContactListPage(getDriver());
+		addContactPage = new AddContactPage(getDriver());
 
 		loginPage.login("test@set.com", "test@123$");
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.urlContains("contactList"));
 	}
 
 	@Test(priority = 1)
 	public void testContactFormAlignment() {
 		
-		test = report.createTest("Testcase-UI & Responsiveness-6.26- Verify alignment of fields on contact form");
+		test.set(report.createTest("Testcase-UI & Responsiveness-6.26- Verify alignment of fields on contact form"));
 
 		addContactPage = contactListPage.clickAddContact();
 
-		WebElement fName = driver.findElement(By.id("firstName"));
-		WebElement lName = driver.findElement(By.id("lastName"));
-		WebElement dob = driver.findElement(By.id("birthdate"));
-		WebElement email = driver.findElement(By.id("email"));
-		WebElement phone = driver.findElement(By.id("phone"));
-		WebElement sadd1 = driver.findElement(By.id("street1"));
-		WebElement sadd2 = driver.findElement(By.id("street2"));
-		WebElement city = driver.findElement(By.id("city"));
-		WebElement state = driver.findElement(By.id("stateProvince"));
-		WebElement poscode = driver.findElement(By.id("postalCode"));
-		WebElement country = driver.findElement(By.id("country"));
-		WebElement submit = driver.findElement(By.id("submit"));
-		WebElement cancel = driver.findElement(By.id("cancel"));
+		WebElement fName = getDriver().findElement(By.id("firstName"));
+		WebElement lName = getDriver().findElement(By.id("lastName"));
+		WebElement dob = getDriver().findElement(By.id("birthdate"));
+		WebElement email = getDriver().findElement(By.id("email"));
+		WebElement phone = getDriver().findElement(By.id("phone"));
+		WebElement sadd1 = getDriver().findElement(By.id("street1"));
+		WebElement sadd2 = getDriver().findElement(By.id("street2"));
+		WebElement city = getDriver().findElement(By.id("city"));
+		WebElement state = getDriver().findElement(By.id("stateProvince"));
+		WebElement poscode = getDriver().findElement(By.id("postalCode"));
+		WebElement country = getDriver().findElement(By.id("country"));
+		WebElement submit = getDriver().findElement(By.id("submit"));
+		WebElement cancel = getDriver().findElement(By.id("cancel"));
 
 		int x1 = fName.getLocation().getX();
 		int x2 = lName.getLocation().getX();
@@ -80,12 +83,12 @@ public class UITest extends BaseTest {
 			Assert.assertEquals(x6, x1, "Left Column Alignment Failed (Sadd1 vs FirstName )");
 
 			Assert.assertEquals(x2, x1, "Layout Error: Last Name should be to the right of First Name");
-			test.log(Status.PASS, "All fields and buttons are partially aligned.");
+			getTest().log(Status.PASS, "All fields and buttons are partially aligned.");
 		} catch (AssertionError e) {
-			test.log(Status.FAIL, "Assertion Failed: " + e.getMessage());
+			getTest().log(Status.FAIL, "Assertion Failed: " + e.getMessage());
 			throw e;
 		} catch (Exception e) {
-			test.log(Status.FAIL, "Exception Occurred: " + e.getMessage());
+			getTest().log(Status.FAIL, "Exception Occurred: " + e.getMessage());
 			throw e;
 		}
 	}
@@ -93,7 +96,7 @@ public class UITest extends BaseTest {
 	@Test(priority = 2)
 	public void testActionSuccessIndicator() {
 		
-		test = report.createTest("Testcase-UI & Responsiveness-6.27- Verify toast messages or success indicators");
+		test.set(report.createTest("Testcase-UI & Responsiveness-6.27- Verify toast messages or success indicators"));
 
 		addContactPage = contactListPage.clickAddContact();
 
@@ -101,12 +104,12 @@ public class UITest extends BaseTest {
 				"123", "USA");
 		addContactPage.clickSubmit();
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
 
 		try {
 			wait.until(ExpectedConditions.urlContains("contactList"));
 			System.out.println("DEBUG: Success indicator (Redirection) observed.");
-			test.log(Status.PASS, "Brief confirmation message or status update is shown");
+			getTest().log(Status.PASS, "Brief confirmation message or status update is shown");
 		} catch (Exception e) {
 			Assert.fail("Success Indicator Failed: User was not redirected after adding contact.");
 		}

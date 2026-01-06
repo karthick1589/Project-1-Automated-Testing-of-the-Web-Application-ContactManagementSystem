@@ -1,11 +1,17 @@
 package Baseclass;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.io.FileHandler;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
@@ -21,10 +27,10 @@ import utilityclass.ConfigReader;
 
 public class BaseTest {
 
-	public WebDriver driver;
+	public static ThreadLocal<WebDriver> driver =new ThreadLocal<>();
+	public static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
 	public static ExtentSparkReporter html;
 	public static ExtentReports report;
-	public static ExtentTest test;
 
 	@BeforeSuite
 	public void setupReport() {
@@ -45,37 +51,40 @@ public class BaseTest {
 		}
 
 		System.out.println("Launching Browser: " + browser);
+		WebDriver localDriver;
 
 		switch (browser.toLowerCase()) {
 		case "chrome":
-			driver = new ChromeDriver();
+			localDriver = new ChromeDriver();
 			break;
 		case "firefox":
-			driver = new FirefoxDriver();
+			localDriver = new FirefoxDriver();
 			break;
 		case "edge":
-			driver = new EdgeDriver();
+			localDriver = new EdgeDriver();
 			break;
 		default:
 			throw new IllegalArgumentException("Browser not supported: " + browser);
 		}
-
-		driver.manage().window().maximize();
+		
+		driver.set(localDriver);
+		getDriver().manage().window().maximize();
 		String waitTime = ConfigReader.getProperty("implicitWait");
 		long wait = (waitTime != null) ? Long.parseLong(waitTime) : 10;
 
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(wait));
+		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(wait));
 
 		String appUrl = ConfigReader.getProperty("testurl");
 		if (appUrl != null)
-			driver.get(appUrl);
+			getDriver().get(appUrl);
 		;
 	}
 
 	@AfterMethod
 	public void tearDown() {
-		if (driver != null) {
-			driver.quit();
+		if (getDriver() != null) {
+			getDriver().quit();
+			driver.remove();
 		}
 	}
 
@@ -86,5 +95,32 @@ public class BaseTest {
 			System.out.println("DEBUG: Report Flushed (Saved)");
 		}
 	}
+	
+	public static WebDriver getDriver() {
+        return driver.get();
+    }
+    
+    public static ExtentTest getTest() {
+        return test.get();
+    }
 
+	public String takeScreenshot(String testName) {
+
+		TakesScreenshot ts = (TakesScreenshot) getDriver();
+
+		File source = ts.getScreenshotAs(OutputType.FILE);
+
+		String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new java.util.Date());
+		String fileName = testName + "_" + timestamp + ".png";
+
+		File destination = new File("./screenshots/" + fileName);
+
+		try {
+			FileHandler.copy(source, destination);
+			System.out.println("Screenshot taken: " + destination.getAbsolutePath());
+		} catch (IOException e) {
+			System.out.println("Failed to save screenshot: " + e.getMessage());
+		}
+		return fileName;
+	}
 }
